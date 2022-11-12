@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --main-color: #ffc107;
+  --main-color: #2f3c97;
   --sec-color: #ffab4c;
   --link-color: #212529;
   --bg-extra-dark: #343a40;
@@ -358,7 +358,7 @@ footer .links a:hover {
 footer p {
   padding-bottom: 6px;
   display: inline-block;
-  border-bottom: 2px solid #fff;
+  /* border-bottom: 2px solid #fff; */
 }
 
 @media (max-width: 990px) {
@@ -394,10 +394,5 @@ footer p {
 
   #testimonials .carousel .carousel-cell {
     width: 100%;
-  }
-  .cardList{
-    display: flex;
-    flex-direction: column;
-    
   }
 }
