@@ -102,7 +102,7 @@ select{
     width: 90%;
     /* background-color: yellow; */
 }
-@media screen and (max-width:1450px) {
+@media screen and (max-width:1850px) {
     .hero2item{
         display: flex;
         flex-direction: column;
@@ -151,7 +151,7 @@ float: left;
    }
     
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1500px){
     .border-img{
         width: 15%;
     }
