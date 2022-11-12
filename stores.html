@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="extras.css" />
+
+    <title>Cash Pro - Stores</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="p-3 pe-0 shadow-lg">
+      <div class="mt-3 mb-4">
+        <h3 class="text-white wt fw-700">Cash Pro</h3>
+        <button class="close-sidebar bg-transparent border-0">
+          <ion-icon
+            size="large"
+            name="backspace"
+            class="text-white me-3"
+          ></ion-icon>
+        </button>
+      </div>
+
+      <div class="links d-flex-flex-column align-items-center mt-5">
+        <ul>
+          <li class="fs-5 mb-3">
+            <a href="/">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="home-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="mt-1">Home</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="allStores.html">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="ellipsis-horizontal-circle-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="mt-1">About</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="stores.html">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="cart-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="mt-1">Stores</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="search_res.html">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="grid-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="mt-1">Categories</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="#">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  name="cash-outline"
+                  size="large"
+                  class="me-3"
+                ></ion-icon>
+                <span class="">Coupens</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="allDeals.html">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="wallet-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="">Best Deals</span>
+              </div>
+            </a>
+          </li>
+          <li class="fs-5 mb-3">
+            <a href="#">
+              <div class="d-flex w-100 fw-500 p-1 rounded-left-lg">
+                <ion-icon
+                  size="large"
+                  name="information-circle-outline"
+                  class="me-3"
+                ></ion-icon>
+                <span class="">How it Works?</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-dark p-1 sticky-div">
+      <div class="container-fluid">
+        <button class="open-sidebar bg-transparent border-0">
+          <ion-icon
+            name="menu-outline"
+            class="text-white me-md-4 me-1 mt-2"
+          ></ion-icon>
+        </button>
+
+        <a class="navbar-brand d-none d-md-block" href="#">Website Logo</a>
+
+        <form class="d-flex ms-auto w-50 me-md-3 me-1">
+          <input
+            type="text"
+            required
+            class="form-control rounded-left border-0 fs-6"
+            placeholder="Search a product, retailer..."
+          />
+          <button
+            type="submit"
+            class="input-group-text rounded-right bg-white border-0"
+            id="basic-addon2"
+          >
+            <ion-icon
+              size="large"
+              name="search-outline"
+              class="text-blue"
+            ></ion-icon>
+          </button>
+        </form>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-md-3 mx-1">
+            <a class="nav-link text-white" href="#">
+              <ion-icon
+                size="large"
+                name="person"
+                class="text-white mt-3 mt-md-2"
+              ></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section main Content -->
+    <!-- results grid -->
+    <section id="stores-res">
+      <div class="container p-2 p-lg-3">
+        <div class="text-center mb-md-4 my-3">
+          <h2 class="text-center wt text-dark fw-600">Results for Amazon</h2>
+          <p class="lead text-secondary fw-500">440 Results</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 col-lg-3 overflow-auto sm-overflow-scroll">
+            <div class="shadow text-start bg-white p-2 rounded-3">
+              <h6 class="fw-600 border-bottom text-start mb-3 pb-1">
+                FILTER BY-
+              </h6>
+              <div
+                class="d-flex flex-md-column justify-content-between div-active"
+              >
+                <a href="#" class="active" data-view="prod">
+                  <p class="fs-6 fw-700 p-2 mb-0">Products</p></a
+                >
+                <a href="#" data-view="store"
+                  ><p class="fs-6 fw-600 p-2 mb-0">Stores</p></a
+                >
+                <a href="#" data-view="deal-coup"
+                  ><p class="fs-6 fw-600 p-2 mb-0">Deals & Coupens</p></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-lg-9">
+            <div class="show-divs">
+              <div class="row g-4" data-view="prod">
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm">
+                    <div class="card-body text-center pb-1">
+                      <div class="border-bottom">
+                        <img
+                          src="images/icons/products.jpg"
+                          class="rounded-3 mb-3 img-fluid"
+                          alt="person1"
+                        />
+                        <h5 class="card-title mb-2 text-dark fw-600">
+                          Brand: Amazon
+                        </h5>
+                      </div>
+                      <div class="pt-2">
+                        <p class="fw-500 text-secondary mb-1">
+                          234-UIP Dual Ear Pods, Boult
+                        </p>
+
+                        <div>
+                          <span class="text-dark fs-4 fw-500 me-2">$70</span>
+                          <span class="fs-5 text-danger fw-600">(30% Off)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                      <a href="#" class="btn btn-dark w-100">
+                        View Product
+                        <ion-icon
+                          class="text-white ms-1 md-icon"
+                          name="open-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm">
+                    <div class="card-body text-center pb-1">
+                      <div class="border-bottom">
+                        <img
+                          src="images/icons/products.jpg"
+                          class="rounded-3 mb-3 img-fluid"
+                          alt="person1"
+                        />
+                        <h5 class="card-title mb-2 text-dark fw-600">
+                          Brand: Amazon
+                        </h5>
+                      </div>
+                      <div class="pt-2">
+                        <p class="fw-500 text-secondary mb-1">
+                          234-UIP Dual Ear Pods, Boult
+                        </p>
+
+                        <div>
+                          <span class="text-dark fs-4 fw-500 me-2">$70</span>
+                          <span class="fs-5 text-danger fw-600">(30% Off)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                      <a href="#" class="btn btn-dark w-100">
+                        View Product
+                        <ion-icon
+                          class="text-white ms-1 md-icon"
+                          name="open-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm">
+                    <div class="card-body text-center pb-1">
+                      <div class="border-bottom">
+                        <img
+                          src="images/icons/products.jpg"
+                          class="rounded-3 mb-3 img-fluid"
+                          alt="person1"
+                        />
+                        <h5 class="card-title mb-2 text-dark fw-600">
+                          Brand: Amazon
+                        </h5>
+                      </div>
+                      <div class="pt-2">
+                        <p class="fw-500 text-secondary mb-1">
+                          234-UIP Dual Ear Pods, Boult
+                        </p>
+
+                        <div>
+                          <span class="text-dark fs-4 fw-500 me-2">$70</span>
+                          <span class="fs-5 text-danger fw-600">(30% Off)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                      <a href="#" class="btn btn-dark w-100">
+                        View Product
+                        <ion-icon
+                          class="text-white ms-1 md-icon"
+                          name="open-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm">
+                    <div class="card-body text-center pb-1">
+                      <div class="border-bottom">
+                        <img
+                          src="images/icons/products.jpg"
+                          class="rounded-3 mb-3 img-fluid"
+                          alt="person1"
+                        />
+                        <h5 class="card-title mb-2 text-dark fw-600">
+                          Brand: Amazon
+                        </h5>
+                      </div>
+                      <div class="pt-2">
+                        <p class="fw-500 text-secondary mb-1">
+                          234-UIP Dual Ear Pods, Boult
+                        </p>
+
+                        <div>
+                          <span class="text-dark fs-4 fw-500 me-2">$70</span>
+                          <span class="fs-5 text-danger fw-600">(30% Off)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                      <a href="#" class="btn btn-dark w-100">
+                        View Product
+                        <ion-icon
+                          class="text-white ms-1 md-icon"
+                          name="open-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm">
+                    <div class="card-body text-center pb-1">
+                      <div class="border-bottom">
+                        <img
+                          src="images/icons/products.jpg"
+                          class="rounded-3 mb-3 img-fluid"
+                          alt="person1"
+                        />
+                        <h5 class="card-title mb-2 text-dark fw-600">
+                          Brand: Amazon
+                        </h5>
+                      </div>
+                      <div class="pt-2">
+                        <p class="fw-500 text-secondary mb-1">
+                          234-UIP Dual Ear Pods, Boult
+                        </p>
+
+                        <div>
+                          <span class="text-dark fs-4 fw-500 me-2">$70</span>
+                          <span class="fs-5 text-danger fw-600">(30% Off)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                      <a href="#" class="btn btn-dark w-100">
+                        View Product
+                        <ion-icon
+                          class="text-white ms-1 md-icon"
+                          name="open-outline"
+                        ></ion-icon>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-4 d-none" data-view="store">
+                <div class="col-md-6 col-lg-4">
+                  <a href="">
+                    <div class="card bg-white shadow-sm">
+                      <div class="card-body text-center mb-0">
+                        <div class="border-bottom">
+                          <img
+                            src="images/icons/store.png"
+                            class="rounded-3 mb-3 img-fluid"
+                            alt="person1"
+                          />
+                          <h5 class="card-title mb-2 text-dark fw-600">
+                            Store: Amazon
+                          </h5>
+                        </div>
+                        <div class="pt-2 text-success">
+                          <h6 class="fw-600 mb-1">
+                            Earn Upto $50 rewards, Cashbacks, etc.
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center border-0 bg-white">
+                        <a href="#" class="btn btn-dark w-100">Visit Store </a>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <a href="">
+                    <div class="card bg-white shadow-sm">
+                      <div class="card-body text-center mb-0">
+                        <div class="border-bottom">
+                          <img
+                            src="images/icons/store.png"
+                            class="rounded-3 mb-3 img-fluid"
+                            alt="person1"
+                          />
+                          <h5 class="card-title mb-2 text-dark fw-600">
+                            Store: Flipkart
+                          </h5>
+                        </div>
+                        <div class="pt-2 text-success">
+                          <h6 class="fw-600 mb-1">
+                            Earn Upto $30 rewards, Cashbacks, etc.
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center border-0 bg-white">
+                        <a href="#" class="btn btn-dark w-100">Visit Store</a>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <a href="">
+                    <div class="card bg-white shadow-sm">
+                      <div class="card-body text-center mb-0">
+                        <div class="border-bottom">
+                          <img
+                            src="images/icons/store.png"
+                            class="rounded-3 mb-3 img-fluid"
+                            alt="person1"
+                          />
+                          <h5 class="card-title mb-2 text-dark fw-600">
+                            Store: Snapdeal
+                          </h5>
+                        </div>
+                        <div class="pt-2 text-success">
+                          <h6 class="fw-600 mb-1">
+                            Earn Upto $10 rewards, Cashbacks, etc.
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center border-0 bg-white">
+                        <a href="#" class="btn btn-dark w-100">Visit Store</a>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <a href="">
+                    <div class="card bg-white shadow-sm">
+                      <div class="card-body text-center mb-0">
+                        <div class="border-bottom">
+                          <img
+                            src="images/icons/store.png"
+                            class="rounded-3 mb-3 img-fluid"
+                            alt="person1"
+                          />
+                          <h5 class="card-title mb-2 text-dark fw-600">
+                            Store: Ajio
+                          </h5>
+                        </div>
+                        <div class="pt-2 text-success">
+                          <h6 class="fw-600 mb-1">
+                            Earn Upto $200 rewards, Cashbacks, etc.
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="card-footer text-center border-0 bg-white">
+                        <a href="#" class="btn btn-dark w-100">Visit Store</a>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="row g-4 d-none" data-view="deal-coup">
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-white shadow-sm border">
+                    <a href="">
+                      <img
+                        src="images/icons/coupen.png"
+                        class="rounded-top img-fluid card-img-top"
+                        alt="person1"
+                      />
+                    </a>
+                    <div
+                      class="
+                        card-footer
+                        bg-white
+                        d-flex
+                        justify-content-between
+                        border-0
+                      "
+                    >
+                      <a href="#" class="btn btn-dark">Grab Deal</a>
+                      <p class="small fw-600 my-auto rred">T&C Apply*</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="wt mt-5">
+      <div class="container p-4 text-white">
+        <div class="row g-4">
+          <div class="col-md-3 col-sm-6 text-start mx-auto">
+            <p class="fs-6 fw-400 mb-3">About CashPro</p>
+            <div class="links">
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li class="small mb-2"><a href="#">Recent Blogs</a></li>
+              <li class="small mb-2"><a href="#">Press</a></li>
+              <li class="small mb-2"><a href="#">Testimonials</a></li>
+              <li class="small mb-2"><a href="#">FAQ</a></li>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-start mx-auto">
+            <p class="fs-6 fw-400 mb-3">Useful Reads</p>
+            <div class="links">
+              <li class="small mb-2"><a href="#">Terms and Conditions</a></li>
+              <li class="small mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="small mb-2"><a href="#">Anti Spam Policy</a></li>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-start mx-auto">
+            <p class="fs-6 fw-400 mb-3">Special Pages</p>
+            <div class="links">
+              <li class="small mb-2"><a href="#">Refer and Earn</a></li>
+              <li class="small mb-2"><a href="#">Career</a></li>
+              <li class="small mb-2"><a href="#">Become Our Partner</a></li>
+              <li class="small mb-2"><a href="#">Extras</a></li>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-start mx-auto">
+            <p class="fs-6 fw-400 mb-3">Download Our App</p>
+            <div class="links">
+              <li class="small mb-2">
+                <a href="#">
+                  <img src="images/icons/googleplay.png" alt="" />
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center bg-extra-dark p-2">
+        <h6 class="fw-300 text-white pb-0 mb-0">
+          Copyright &copy; 2022 - A Platfrom by Codven Solutions
+        </h6>
+      </div>
+    </footer>
+
+    <!-- Required Scripts -->
+    <!-- Icons Package -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+      const lis = document.querySelectorAll('#stores-res .div-active a');
+      const showDivs = document.querySelectorAll(
+        '#stores-res .show-divs > div'
+      );
+
+      for (let i = 0; i < lis.length; i++) {
+        const element = lis[i];
+        element.addEventListener('click', () => {
+          for (let j = 0; j < lis.length; j++) {
+            lis[j].classList.remove('active');
+            showDivs[j].classList.add('d-none');
+          }
+          element.classList.add('active');
+          showDivs[i].classList.remove('d-none');
+        });
+      }
+    </script>
+  </body>
+</html>
