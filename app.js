@@ -87,4 +87,37 @@ sortBtn.addEventListener('click', () => {
   sortDiv.classList.toggle('d-block');
 });
 
+function changeImage2() {
+  console.log("hello");
+  console.log(document.getElementById("displayImage").src);
+  if (document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/hedphone.jpg") {
+      document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/left2.jpg";
+  }
+  if (document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/left3.jpg") {
+      document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/left2.jpg";
+  }
+}
+
+function changeImage1() {
+  console.log("hello");
+  console.log(document.getElementById("displayImage").src);
+  if (document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/left2.jpg") {
+      document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/hedphone.jpg";
+  }
+  if (document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/left3.jpg") {
+      document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/hedphone.jpg";
+  }
+}
+
+function changeImage3() {
+  console.log("hello");
+  console.log(document.getElementById("displayImage").src);
+  if (document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/left2.jpg") {
+      document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/left3.jpg";
+  }
+  if(document.getElementById("displayImage").src == "http://127.0.0.1:5502/images/hedphone.jpg"){
+    document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/left3.jpg";
+  }
+}
+
 

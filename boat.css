@@ -46,6 +46,28 @@ padding-top: 26px;    padding-left: 3%;
 .smallimg img{
     width: 100%;
 }
+.smallimg2{
+    border: 1px solid #cacaca;
+    /* background-color: red; */
+}
+.smallimg2 img:hover{
+    cursor: pointer;
+}
+
+.smallimg2 img{
+    width: 100%;
+}
+.smallimg3{
+    border: 1px solid #cacaca;
+    /* background-color: red; */
+}
+.smallimg3 img:hover{
+    cursor: pointer;
+}
+
+.smallimg3 img{
+    width: 100%;
+}
 .hero1 .lefti{
 flex: 0.2;
 }
