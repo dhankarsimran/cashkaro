@@ -97,9 +97,10 @@ select{
 }
 .hero2item{
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
     gap: 3rem;
-    width: 90%;
+    width: 100%;
     /* background-color: yellow; */
 }
 @media screen and (max-width:1850px) {
