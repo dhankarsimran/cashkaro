@@ -270,7 +270,7 @@
               color: #a9b7c8;
               font-weight: 500;
             "
-            onclick={clickSingleA(this)}
+            onclick={clickStore()}
             ><div>store</div></a
           >
           <a
@@ -283,7 +283,7 @@
               color: #a9b7c8;
               font-weight: 500;
             "
-             onclick={clickSingleA(this)}
+             onclick={clickProduct()}
             ><div>product</div></a
           >
           <a
@@ -295,7 +295,7 @@
               color: #a9b7c8;
               font-weight: 500;
             "
-             onclick={clickSingleA(this)}
+             onclick={clickDeal()}
           >
             <div>deal</div></a
           >
@@ -304,52 +304,276 @@
       <div class="p-lg-5 p-4">
         <!-- offers grid -->
         <div class="container pt-0 mb-4" >
+          
           <div class="row text-center g-5">
-        
-            <div class="col-md-6 col-lg-3 mb-4">
-              <div
-                class="card text-dark shadow-sm"
-                style="border-style: none; width: 17rem; height: auto"
-              >
+
+            <!-- store data -->
+          <div class="container pt-0 mb-4" id="storedata">
+          <div class="row text-center g-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
                 <div class="card-body text-center">
-              
-                  <a href="#"
-                    ><img
-                      src="images/mobile.jpg"
-                      class="img-fluid mb-3 rounded-3"
-                      width="200"
-                     
-                      alt=""
-                    />
-                  </a>
-                  <a href="#">
-                    <p
-                      class="card-title mb-3 mt-3 wt fw-500 fs-7"
-                      style="color: #38a4f5"
-                    >
-                  ₹100000
-                    <br>
-                    <s>₹400000</s>
-                    </p></a
-                  >
-                  <a
-                    href="#"
-                    class="btn btn-dark w-80 fw-600"
-                    style="
-                      background-color: #f07431;
-                      border-style: none;
-                      font-size: smaller;
-                    "
-                    >VIEW DETAIL
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/amazon.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
                     <span class="ms-1 deal-icon">
-                      <ion-icon name="paper-plane"></ion-icon>
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
                     </span>
                   </a>
-              
                 </div>
               </div>
             </div>
-               
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
+                <div class="card-body text-center">
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/myntra.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                    <span class="ms-1 deal-icon">
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
+                <div class="card-body text-center">
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/tata.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                    <span class="ms-1 deal-icon">
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
+                <div class="card-body text-center">
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/flipkart.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                    <span class="ms-1 deal-icon">
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
+                <div class="card-body text-center">
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/2.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                    <span class="ms-1 deal-icon">
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+              <div class="card text-dark shadow-sm">
+                <div class="card-body text-center">
+                  <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+
+                  <img src="images/brands/3.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+
+                  <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                    <span class="ms-1 deal-icon">
+                      <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- product data -->
+        <div class="productBox">
+          <div class="col-md-6 col-lg-3 mb-4" id="productdata" style="display:none">    
+            <div class="card text-dark shadow-sm" style="border-style: none; width: 17rem; height: auto">   
+              <div class="card-body text-center" id="productDetail">
+                <a href="#"><img
+                    src="images/mobile.jpg"
+                    class="img-fluid mb-3 rounded-3"
+                    width="200" 
+                    alt=""
+                  />
+                </a>
+                <a href="#">
+                  <p
+                    class="card-title mb-3 mt-3 wt fw-500 fs-7"
+                    style="color: #38a4f5"
+                  >
+                ₹100000
+                  <br>
+                  <s>₹400000</s>
+                  </p></a
+                >
+                <a
+                  href="#"
+                  class="btn btn-dark w-80 fw-600"
+                  style="
+                    background-color: #f07431;
+                    border-style: none;
+                    font-size: smaller;
+                  "
+                  >VIEW DETAIL
+                  <span class="ms-1 deal-icon">
+                    <ion-icon name="paper-plane"></ion-icon>
+                  </span>
+                </a>
+              </div>
+            </div>    
+            <div class="card text-dark shadow-sm" style="border-style: none; width: 17rem; height: auto">   
+              <div class="card-body text-center" id="productDetail">
+                <a href="#"><img
+                    src="images/mobile.jpg"
+                    class="img-fluid mb-3 rounded-3"
+                    width="200" 
+                    alt=""
+                  />
+                </a>
+                <a href="#">
+                  <p
+                    class="card-title mb-3 mt-3 wt fw-500 fs-7"
+                    style="color: #38a4f5"
+                  >
+                ₹100000
+                  <br>
+                  <s>₹400000</s>
+                  </p></a
+                >
+                <a
+                  href="#"
+                  class="btn btn-dark w-80 fw-600"
+                  style="
+                    background-color: #f07431;
+                    border-style: none;
+                    font-size: smaller;
+                  "
+                  >VIEW DETAIL
+                  <span class="ms-1 deal-icon">
+                    <ion-icon name="paper-plane"></ion-icon>
+                  </span>
+                </a>
+              </div>
+            </div>    
+          </div>
+          
+        </div>
+            
+         
+            <!-- deal data -->
+          <div class="container pt-0 mb-4" id="dealdata" style="display:none">
+            <div class="row text-center g-4">
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/amazon.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/myntra.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/tata.png" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/flipkart.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/2.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card text-dark shadow-sm">
+                  <div class="card-body text-center">
+                    <h3 class="card-title mb-3 wt fw-500">Trousers</h3>
+  
+                    <img src="images/brands/3.jpg" class="img-fluid mb-3 rounded-3" style="height: 200px" alt="">
+  
+                    <a href="#" class="btn btn-dark w-75">Code: 252VBEJE86
+                      <span class="ms-1 deal-icon">
+                        <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
               
               </div>
             </div>
@@ -452,11 +676,43 @@
     a.className = 'list active';
 }
     </script>
+    <script>
+      function clickStore(){
+        // document.getElementById("productdata").style.display = "none";
+        console.log("function running");
+        var elem = document.querySelector('#storedata');
+        elem.style.display='block';
+        var elem1 = document.querySelector('#productdata');
+        elem1.style.display='none';
+        var elem2 = document.querySelector('#dealdata');
+        elem2.style.display='none';
+      }
+      function clickProduct(){
+        // document.getElementById("productdata").style.display = "none";
+        console.log("function running");
+        var elem = document.querySelector('#productdata');
+        elem.style.display='flex';
+        var elem = document.querySelector('#storedata');
+        elem.style.display='none';
+        var elem2 = document.querySelector('#dealdata');
+        elem2.style.display='none';
+      }
+      function clickDeal(){
+        // document.getElementById("productdata").style.display = "none";
+        console.log("function running");
+        var elem = document.querySelector('#dealdata');   
+        elem.style.display='block';
+        var elem = document.querySelector('#productdata');
+        elem.style.display='none';
+        var elem = document.querySelector('#storedata');
+        elem.style.display='none';
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
-    ></script>
+    ></script>  
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
