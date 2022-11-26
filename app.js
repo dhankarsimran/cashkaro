@@ -119,5 +119,5 @@ function changeImage3() {
     document.getElementById("displayImage").src = "http://127.0.0.1:5502/images/left3.jpg";
   }
 }
-
+  
 
